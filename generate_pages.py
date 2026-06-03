@@ -8,7 +8,7 @@ fashion_products = [
         "title": "ZĀRAK Amber Silk Anarkali",
         "price": "Rs. 14,999",
         "orig_price": "Rs. 18,999",
-        "img": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80",
+        "img": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=600&q=80",
         "rating": "4.9",
         "reviews": "145"
     },
@@ -234,7 +234,7 @@ def generate_pages():
     def create_category_page(filename, title, desc, product_list, hero_img):
         products_html = f"""
         <!-- Category Hero Banner -->
-        <section class="category-hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(9,9,11,0.85) 100%), url('{hero_img}');">
+        <section class="category-hero" style="background-image: url('{hero_img}');">
             <div class="category-hero-content">
                 <span class="category-tag">ZĀRAK SELECT</span>
                 <h1>{title}</h1>
@@ -323,11 +323,11 @@ def generate_pages():
  
     # 1. Generate Category Pages with unique data and Hero Banners
     create_category_page("new-in.html", "New Arrivals", "Discover the latest additions to our premium collection.", new_in_products, "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80")
-    create_category_page("fashion.html", "Premium Fashion", "Elevate your wardrobe with our latest high-end apparel.", fashion_products, "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("fashion.html", "Premium Fashion", "Elevate your wardrobe with our latest high-end apparel.", fashion_products, "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1600&q=80")
     create_category_page("beauty.html", "Beauty & Fragrance", "Luxurious scents and beauty essentials for the modern lifestyle.", beauty_products, "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1600&q=80")
     create_category_page("living.html", "Home Decor", "Minimalist, sophisticated pieces to transform your living space.", living_products, "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80")
-    create_category_page("sale.html", "Flash Sale", "Exclusive discounts on our finest ZĀRAK select pieces.", sale_products, "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1600&q=80")
-    create_category_page("collection.html", "Our Complete Collection", "Explore the full range of ZĀRAK premium lifestyle products.", collection_products, "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("sale.html", "Flash Sale", "Exclusive discounts on our finest ZĀRAK select pieces.", sale_products, "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("collection.html", "Our Complete Collection", "Explore the full range of ZĀRAK premium lifestyle products.", collection_products, "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80")
     
     # 2. Generate Policy / Info Pages
     lorem = "<p style='margin-bottom: 15px;'>This is a dummy page created to showcase the premium layout. In a real production environment, this section would contain detailed policies tailored for Pakistani customers.</p>" * 3
