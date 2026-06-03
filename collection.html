@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/image-fit.css">
+    <link rel="stylesheet" href="css/premium-overrides.css">
 </head>
 
 <body>
@@ -44,15 +45,22 @@
     </header>
 
     <!-- Main Content -->
-    <main style="margin-top: 80px;">
-        <section class="section products-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 style="font-size: 3rem; margin-top: 20px;">Our Complete Collection</h2>
-                    <p>Explore the full range of ZĀRAK premium lifestyle products.</p>
+    <main style="margin-top: 0px;">
+        <!-- Category Hero Banner -->
+        <section class="category-hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(9,9,11,0.85) 100%), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1600&q=80');">
+            <div class="category-hero-content">
+                <span class="category-tag">ZĀRAK SELECT</span>
+                <h1>Our Complete Collection</h1>
+                <p>Explore the full range of ZĀRAK premium lifestyle products.</p>
+                <div class="hero-scroll-indicator">
+                    <span class="mouse-scroll"></span>
                 </div>
-                
-                <div class="product-grid" style="margin-top: 40px;">
+            </div>
+        </section>
+
+        <section class="section products-section reveal-on-scroll" style="padding-top: 80px; padding-bottom: 120px;">
+            <div class="container">
+                <div class="product-grid">
         
                     <div class="product-card">
                         <div class="product-image">
@@ -288,6 +296,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/dynamic-content.js"></script>
+    <script src="js/scroll-reveal.js"></script>
 
     <!-- Chatbot Widget Integration -->
     <script 

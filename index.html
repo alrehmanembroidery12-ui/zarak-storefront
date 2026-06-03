@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/image-fit.css">
+    <link rel="stylesheet" href="css/premium-overrides.css">
 </head>
 
 <body>
@@ -44,30 +45,32 @@
     </header>
 
     <!-- Main Content -->
-    <main style="margin-top: 80px;">
+    <main style="margin-top: 0px;">
 
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-image">
-                <img src="images/hero_banner.png" alt="ZĀRAK Premium Edition" id="hero-img">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=80" alt="ZĀRAK Premium Edition" id="hero-img">
             </div>
             <div class="hero-content">
                 <div class="badges">
-                    <span class="badge">COD Available</span>
-                    <span class="badge">Free Delivery</span>
+                    <span class="badge"><i class="fas fa-shipping-fast" style="margin-right: 5px;"></i> Free Nationwide Delivery</span>
+                    <span class="badge"><i class="fas fa-hand-holding-usd" style="margin-right: 5px;"></i> Cash On Delivery</span>
                 </div>
-                <h1>Redefine Your<br>Everyday Luxury</h1>
-                <p>Discover the new standard of premium lifestyle essentials in Pakistan. Handcrafted quality, timeless
-                    design.</p>
+                <h1>Redefine Your<br><span class="gold-text-gradient">Everyday Luxury</span></h1>
+                <p>Discover the new standard of premium lifestyle essentials in Pakistan. Handcrafted quality, timeless design.</p>
                 <div class="hero-actions">
                     <a href="collection.html" class="btn btn-primary">Shop Now</a>
                     <a href="collection.html" class="btn btn-outline">Explore Collection</a>
+                </div>
+                <div class="hero-scroll-indicator">
+                    <span class="mouse-scroll"></span>
                 </div>
             </div>
         </section>
 
         <!-- Trust Bar -->
-        <div class="trust-bar">
+        <div class="trust-bar reveal-on-scroll">
             <div class="container">
                 <div class="trust-grid">
                     <a href="secure-payment.html" class="trust-item" style="text-decoration: none; color: inherit;">
@@ -91,7 +94,7 @@
         </div>
 
         <!-- Best Selling Products -->
-        <section class="section products-section">
+        <section class="section products-section reveal-on-scroll">
             <div class="container">
                 <div class="section-title">
                     <h2>Best Sellers</h2>
@@ -183,7 +186,7 @@
         </section>
 
         <!-- Categories Section -->
-        <section id="categories" class="section bg-light">
+        <section id="categories" class="section bg-light reveal-on-scroll">
             <div class="container">
                 <div class="section-title">
                     <h2>Shop by Category</h2>
@@ -216,7 +219,7 @@
         </section>
 
         <!-- Limited Time Offer -->
-        <section class="flash-sale">
+        <section class="flash-sale reveal-on-scroll reveal-scale">
             <div class="container">
                 <div class="flash-sale-wrapper">
                     <div class="flash-sale-content">
@@ -250,7 +253,7 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="section">
+        <section class="section reveal-on-scroll">
             <div class="container">
                 <div class="section-title">
                     <h2>What Our Customers Say</h2>
@@ -289,7 +292,7 @@
         </section>
 
         <!-- Newsletter Section -->
-        <section class="newsletter-section">
+        <section class="newsletter-section reveal-on-scroll">
             <div class="container">
                 <div class="newsletter-wrapper">
                     <h2>Join the ZĀRAK Club</h2>
@@ -364,6 +367,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/dynamic-content.js"></script>
+    <script src="js/scroll-reveal.js"></script>
 
     <!-- Chatbot Widget Integration -->
     <script 

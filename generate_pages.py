@@ -123,7 +123,7 @@ beauty_products = [
         "title": "Pure Argan Hair Elixir",
         "price": "Rs. 4,299",
         "orig_price": "",
-        "img": "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=600&q=80",
+        "img": "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=80",
         "rating": "4.8",
         "reviews": "167"
     },
@@ -198,7 +198,7 @@ living_products = [
         "title": "Scented Amber Soy Wax Candle",
         "price": "Rs. 1,799",
         "orig_price": "Rs. 2,499",
-        "img": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80",
+        "img": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80",
         "rating": "4.9",
         "reviews": "119"
     }
@@ -225,21 +225,29 @@ def generate_pages():
     with open(os.path.join(base_dir, "index.html"), "r", encoding="utf-8") as f:
         content = f.read()
     
-    # Split index.html into header and footer parts
-    header_part = content.split("<!-- Main Content -->")[0] + "<!-- Main Content -->\n    <main style=\"margin-top: 80px;\">"
+    # Split index.html into header and footer parts and inject premium overrides CSS link
+    raw_header = content.split("<!-- Main Content -->")[0]
+    header_part = raw_header + "<!-- Main Content -->\n    <main style=\"margin-top: 0px;\">"
     footer_part = "    </main>\n" + content.split("</main>")[1]
     
     # Helper for generating category pages
-    def create_category_page(filename, title, desc, product_list):
+    def create_category_page(filename, title, desc, product_list, hero_img):
         products_html = f"""
-        <section class="section products-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 style="font-size: 3rem; margin-top: 20px;">{title}</h2>
-                    <p>{desc}</p>
+        <!-- Category Hero Banner -->
+        <section class="category-hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(9,9,11,0.85) 100%), url('{hero_img}');">
+            <div class="category-hero-content">
+                <span class="category-tag">ZĀRAK SELECT</span>
+                <h1>{title}</h1>
+                <p>{desc}</p>
+                <div class="hero-scroll-indicator">
+                    <span class="mouse-scroll"></span>
                 </div>
-                
-                <div class="product-grid" style="margin-top: 40px;">
+            </div>
+        </section>
+
+        <section class="section products-section reveal-on-scroll" style="padding-top: 80px; padding-bottom: 120px;">
+            <div class="container">
+                <div class="product-grid">
         """
         
         for idx, p in enumerate(product_list):
@@ -313,13 +321,13 @@ def generate_pages():
         with open(os.path.join(base_dir, filename), "w", encoding="utf-8") as f:
             f.write(full_html)
  
-    # 1. Generate Category Pages with unique data
-    create_category_page("new-in.html", "New Arrivals", "Discover the latest additions to our premium collection.", new_in_products)
-    create_category_page("fashion.html", "Premium Fashion", "Elevate your wardrobe with our latest high-end apparel.", fashion_products)
-    create_category_page("beauty.html", "Beauty & Fragrance", "Luxurious scents and beauty essentials for the modern lifestyle.", beauty_products)
-    create_category_page("living.html", "Home Decor", "Minimalist, sophisticated pieces to transform your living space.", living_products)
-    create_category_page("sale.html", "Flash Sale", "Exclusive discounts on our finest ZĀRAK select pieces.", sale_products)
-    create_category_page("collection.html", "Our Complete Collection", "Explore the full range of ZĀRAK premium lifestyle products.", collection_products)
+    # 1. Generate Category Pages with unique data and Hero Banners
+    create_category_page("new-in.html", "New Arrivals", "Discover the latest additions to our premium collection.", new_in_products, "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("fashion.html", "Premium Fashion", "Elevate your wardrobe with our latest high-end apparel.", fashion_products, "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("beauty.html", "Beauty & Fragrance", "Luxurious scents and beauty essentials for the modern lifestyle.", beauty_products, "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("living.html", "Home Decor", "Minimalist, sophisticated pieces to transform your living space.", living_products, "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("sale.html", "Flash Sale", "Exclusive discounts on our finest ZĀRAK select pieces.", sale_products, "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1600&q=80")
+    create_category_page("collection.html", "Our Complete Collection", "Explore the full range of ZĀRAK premium lifestyle products.", collection_products, "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1600&q=80")
     
     # 2. Generate Policy / Info Pages
     lorem = "<p style='margin-bottom: 15px;'>This is a dummy page created to showcase the premium layout. In a real production environment, this section would contain detailed policies tailored for Pakistani customers.</p>" * 3
@@ -348,7 +356,7 @@ def generate_pages():
     create_text_page("terms.html", "Terms of Service", 
                      "<h3>Terms & Conditions</h3><p>By accessing or using the ZĀRAK website, you agree to be bound by these terms of service and all applicable laws and regulations.</p>" + lorem)
                       
-    print("Successfully generated all 14 pages!")
+    print("Successfully generated all 14 pages with premium category hero sections and CSS overrides!")
 
 if __name__ == "__main__":
     generate_pages()

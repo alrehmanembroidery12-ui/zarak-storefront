@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/image-fit.css">
+    <link rel="stylesheet" href="css/premium-overrides.css">
 </head>
 
 <body>
@@ -44,15 +45,22 @@
     </header>
 
     <!-- Main Content -->
-    <main style="margin-top: 80px;">
-        <section class="section products-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 style="font-size: 3rem; margin-top: 20px;">Beauty & Fragrance</h2>
-                    <p>Luxurious scents and beauty essentials for the modern lifestyle.</p>
+    <main style="margin-top: 0px;">
+        <!-- Category Hero Banner -->
+        <section class="category-hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(9,9,11,0.85) 100%), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1600&q=80');">
+            <div class="category-hero-content">
+                <span class="category-tag">ZĀRAK SELECT</span>
+                <h1>Beauty & Fragrance</h1>
+                <p>Luxurious scents and beauty essentials for the modern lifestyle.</p>
+                <div class="hero-scroll-indicator">
+                    <span class="mouse-scroll"></span>
                 </div>
-                
-                <div class="product-grid" style="margin-top: 40px;">
+            </div>
+        </section>
+
+        <section class="section products-section reveal-on-scroll" style="padding-top: 80px; padding-bottom: 120px;">
+            <div class="container">
+                <div class="product-grid">
         
                     <div class="product-card">
                         <div class="product-image">
@@ -184,7 +192,7 @@
                         <div class="product-image">
                             
                             <a href="product.html" style="display:block; height:100%;">
-                                <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=600&q=80" alt="Pure Argan Hair Elixir">
+                                <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=80" alt="Pure Argan Hair Elixir">
                             </a>
                             <button class="quick-add-btn">Add to Cart</button>
                         </div>
@@ -288,6 +296,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/dynamic-content.js"></script>
+    <script src="js/scroll-reveal.js"></script>
 
     <!-- Chatbot Widget Integration -->
     <script 
