@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden !important;
   margin-top: 80px !important; /* Position below header */
   background: var(--color-bg) !important;
+  border-radius: 0px !important;
 }
 
 .hero-image-block {
@@ -77,12 +78,33 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden !important;
 }
 
-.hero-image-block img {
+.slideshow-container {
+  position: absolute !important;
+  inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+}
+
+.slide {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: center !important;
+  opacity: 0 !important;
+  transition: opacity 1.8s ease-in-out !important;
   filter: brightness(0.97) contrast(1.02) !important;
-  transition: transform 1.2s ease !important;
+}
+
+.slide.active {
+  opacity: 1 !important;
+  animation: heroKenBurns 10s ease-in-out forwards !important;
+}
+
+@keyframes heroKenBurns {
+  0% { transform: scale(1.02); }
+  100% { transform: scale(1.08); }
 }
 
 .hero-text-block {

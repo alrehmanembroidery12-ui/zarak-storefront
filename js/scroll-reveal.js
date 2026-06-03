@@ -44,13 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- 3. Subtle Parallax for Hero Image ---
-  const heroImage = document.querySelector(".hero-image img");
-  if (heroImage) {
-    window.addEventListener("scroll", function () {
-      const scrollPosition = window.pageYOffset;
-      // Move background image slower than content
-      heroImage.style.transform = `scale(1.08) translateY(${scrollPosition * 0.15}px)`;
-    });
+  // --- 3. Smooth Slideshow Autoplay ---
+  const slides = document.querySelectorAll(".slideshow-container .slide");
+  let currentSlide = 0;
+
+  if (slides.length > 1) {
+    setInterval(() => {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }, 4500); // Rotate every 4.5 seconds
   }
 });
