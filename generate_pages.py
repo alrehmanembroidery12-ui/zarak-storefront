@@ -75,7 +75,7 @@ beauty_products = [
         "title": "Royal Oud Intense Perfume",
         "price": "Rs. 12,499",
         "orig_price": "Rs. 15,999",
-        "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80",
+        "img": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
         "rating": "4.9",
         "reviews": "312"
     },
@@ -190,7 +190,7 @@ living_products = [
         "title": "Hand-carved Teakwood Serving Tray",
         "price": "Rs. 4,499",
         "orig_price": "",
-        "img": "https://images.unsplash.com/photo-1532372320978-9b4d6a3a854c?auto=format&fit=crop&w=600&q=80",
+        "img": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
         "rating": "4.8",
         "reviews": "83"
     },
