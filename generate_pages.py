@@ -115,7 +115,7 @@ beauty_products = [
         "title": "Luxury Oud Body Wash",
         "price": "Rs. 1,899",
         "orig_price": "",
-        "img": "https://images.unsplash.com/photo-1607006342411-92427f374c2e?auto=format&fit=crop&w=600&q=80",
+        "img": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80",
         "rating": "4.7",
         "reviews": "241"
     },

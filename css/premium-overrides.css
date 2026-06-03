@@ -466,3 +466,24 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 24px !important;
   }
 }
+
+/* Reposition WhatsApp Float to Bottom-Left to prevent chatbot widget overlap */
+.whatsapp-float {
+  left: 30px !important;
+  right: auto !important;
+}
+
+/* Fix Chatbot Widget container blocking click/hover events on the right side of the screen */
+.af-widget-root {
+  pointer-events: none !important;
+}
+
+.af-chat-bubble {
+  pointer-events: auto !important;
+  background-color: #ffffff !important; /* White backdrop under avatar for transparency safety */
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.af-chat-panel.active {
+  pointer-events: auto !important;
+}
