@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Content Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>ZĀRAK Admin</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item active" data-target="tab-upload">
+                    <i class="fas fa-upload"></i> Upload Picture
+                </li>
+                <li class="menu-item" data-target="tab-change">
+                    <i class="fas fa-image"></i> Change Picture
+                </li>
+                <li class="menu-item" data-target="tab-delete">
+                    <i class="fas fa-trash-alt"></i> Delete Picture
+                </li>
+                <li class="menu-item" data-target="tab-privacy">
+                    <i class="fas fa-file-alt"></i> Privacy Policy
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <h1>Content Management Dashboard</h1>
+            </header>
+
+            <div class="content-area">
+
+                <!-- Tab: Upload Picture -->
+                <section id="tab-upload" class="tab-content active">
+                    <div class="card">
+                        <h2>Upload New Picture</h2>
+                        <p>Upload a picture to the dashboard to be used on the site.</p>
+                        <form id="upload-form">
+                            <div class="form-group">
+                                <label for="upload-image-id">Target Image ID (e.g., hero-img)</label>
+                                <input type="text" id="upload-image-id"
+                                    placeholder="Enter the ID of the image to replace" required>
+                                <small>Available IDs: hero-img, product-1-img, cat-fashion-img, etc.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="upload-file">Select Image File</label>
+                                <input type="file" id="upload-file" accept="image/*" required>
+                            </div>
+                            <div class="image-preview" id="upload-preview">
+                                <span class="preview-placeholder">Image Preview</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload & Apply</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Tab: Change Picture -->
+                <section id="tab-change" class="tab-content">
+                    <div class="card">
+                        <h2>Change Existing Picture</h2>
+                        <p>Select an image on the site and replace it with a newly uploaded one.</p>
+                        <form id="change-form">
+                            <div class="form-group">
+                                <label for="change-image-select">Select Image to Change</label>
+                                <select id="change-image-select" required>
+                                    <option value="" disabled selected>Select an image...</option>
+                                    <option value="hero-img">Homepage Hero Banner</option>
+                                    <option value="product-1-img">Product 1 (Oud Absolu)</option>
+                                    <option value="product-2-img">Product 2 (Silk Dress)</option>
+                                    <option value="product-3-img">Product 3 (Wallet)</option>
+                                    <option value="product-4-img">Product 4 (Vase)</option>
+                                    <option value="cat-fashion-img">Category Fashion</option>
+                                    <option value="cat-beauty-img">Category Beauty</option>
+                                    <option value="cat-living-img">Category Living</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="change-file">Select New Image File</label>
+                                <input type="file" id="change-file" accept="image/*" required>
+                            </div>
+                            <div class="image-preview" id="change-preview">
+                                <span class="preview-placeholder">Image Preview</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Change Picture</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Tab: Delete Picture -->
+                <section id="tab-delete" class="tab-content">
+                    <div class="card">
+                        <h2>Delete Custom Picture</h2>
+                        <p>Remove a custom uploaded picture and revert to the default store image.</p>
+                        <form id="delete-form">
+                            <div class="form-group">
+                                <label for="delete-image-select">Select Image to Delete</label>
+                                <select id="delete-image-select" required>
+                                    <option value="" disabled selected>Select an image...</option>
+                                    <option value="hero-img">Homepage Hero Banner</option>
+                                    <option value="product-1-img">Product 1 (Oud Absolu)</option>
+                                    <option value="product-2-img">Product 2 (Silk Dress)</option>
+                                    <option value="product-3-img">Product 3 (Wallet)</option>
+                                    <option value="product-4-img">Product 4 (Vase)</option>
+                                    <option value="cat-fashion-img">Category Fashion</option>
+                                    <option value="cat-beauty-img">Category Beauty</option>
+                                    <option value="cat-living-img">Category Living</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Delete Custom Picture</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Tab: Privacy Policy -->
+                <section id="tab-privacy" class="tab-content">
+                    <div class="card">
+                        <h2>Edit Privacy Policy</h2>
+                        <p>Update the privacy policy text displayed on the site.</p>
+                        <form id="privacy-form">
+                            <div class="form-group">
+                                <label for="privacy-text">Privacy Policy Content</label>
+                                <textarea id="privacy-text" rows="15"
+                                    placeholder="Enter privacy policy text here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Privacy Policy</button>
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Action completed successfully</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

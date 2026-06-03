@@ -1,0 +1,14 @@
+/* Generic Image Fit */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Ensure containers have consistent constraints if they don't already */
+.hero-image,
+.product-image,
+.category-card img {
+    overflow: hidden;
+}

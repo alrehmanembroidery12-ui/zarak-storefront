@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | ZĀRAK Pakistan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="checkout-page">
+
+    <header class="checkout-header">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+            <a href="index.html" class="logo">ZĀRAK</a>
+            <a href="product.html" style="font-size: 0.9rem; color: var(--color-text-light); transition: color 0.3s;"><i
+                    class="fas fa-chevron-left"></i> Return to Cart</a>
+        </div>
+    </header>
+
+    <main class="checkout-main container">
+        <div class="checkout-grid">
+
+            <!-- Form Section -->
+            <div class="checkout-form-section">
+
+                <h2 class="checkout-title">Contact & Shipping Details</h2>
+
+                <form id="checkout-form"
+                    onsubmit="event.preventDefault(); alert('Order placed successfully! This is a demo.'); window.location.href='index.html';">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Zara Ali" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email <span
+                                    style="color:var(--color-text-light)">(Optional)</span></label>
+                            <input type="email" id="email" placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span style="color:red">*</span></label>
+                            <input type="tel" id="phone" placeholder="0300 1234567" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <input type="text" id="address" placeholder="House/Apt, Street, Area" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <select id="city" required>
+                                <option value="" disabled selected>Select your city</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Karachi">Karachi</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Rawalpindi">Rawalpindi</option>
+                                <option value="Faisalabad">Faisalabad</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Peshawar">Peshawar</option>
+                                <option value="Quetta">Quetta</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="postal">Postal Code <span
+                                    style="color:var(--color-text-light)">(Optional)</span></label>
+                            <input type="text" id="postal" placeholder="54000">
+                        </div>
+                    </div>
+
+                    <h2 class="checkout-title" style="margin-top: 40px;">Payment Method</h2>
+
+                    <div class="payment-methods-box">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <span class="payment-label">
+                                <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery (COD)</span>
+                            </span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="bank">
+                            <span class="payment-label">
+                                <span><i class="fas fa-university"></i> Bank Transfer</span>
+                            </span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="jazzcash">
+                            <span class="payment-label">
+                                <span><i class="fas fa-mobile-alt"></i> JazzCash</span>
+                            </span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="easypaisa">
+                            <span class="payment-label">
+                                <span><i class="fas fa-wallet"></i> EasyPaisa</span>
+                            </span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card">
+                            <span class="payment-label">
+                                <span><i class="far fa-credit-card"></i> Debit / Credit Card</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large checkout-btn">
+                        Place Order <i class="fas fa-lock" style="margin-left: 10px; font-size: 0.8rem;"></i>
+                    </button>
+
+                    <p class="secure-checkout-text">
+                        <i class="fas fa-shield-alt"></i> Your payment information is processed securely.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Order Summary Sidebar -->
+            <div class="order-summary-section">
+                <div class="summary-box">
+                    <h3
+                        style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--color-border);">
+                        Order Summary</h3>
+
+                    <div class="checkout-items">
+                        <div class="checkout-item">
+                            <div class="ci-image">
+                                <img src="images/perfume_bottle.png" alt="Perfume">
+                                <span class="ci-badge">1</span>
+                            </div>
+                            <div class="ci-info">
+                                <h4>Oud Absolu Eau de Parfum</h4>
+                                <span>100ml</span>
+                            </div>
+                            <div class="ci-price">Rs. 8,499</div>
+                        </div>
+                    </div>
+
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>Rs. 8,499</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span style="color: #25D366; font-weight: 500;">Free</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span class="total-price">Rs. 8,499</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer" style="padding-top: 40px; margin-top: 60px;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="logo" style="color: white; margin-bottom: 20px;">ZĀRAK</h3>
+                    <p>Redefining everyday luxury for the modern Pakistani lifestyle.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="new-in.html">New Arrivals</a></li>
+                        <li><a href="fashion.html">Women's Fashion</a></li>
+                        <li><a href="fashion.html">Men's Essentials</a></li>
+                        <li><a href="living.html">Home Decor</a></li>
+                        <li><a href="beauty.html">Beauty & Fragrance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="track.html">Track Order</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="returns.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ZĀRAK. Developed for premium e-commerce in Pakistan. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

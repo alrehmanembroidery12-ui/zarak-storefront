@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZĀRAK | Premium E-Commerce Pakistan</title>
+    <meta name="description"
+        content="Discover premium luxury fashion, beauty, and home decor at ZĀRAK. Nationwide shipping across Pakistan.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/image-fit.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="menu-toggle">
+                <i class="fas fa-bars icon-btn"></i>
+            </div>
+
+            <a href="index.html" class="logo">ZĀRAK</a>
+
+            <ul class="nav-links">
+                <li><a href="new-in.html">New In</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="living.html">Living</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="icon-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="icon-btn" aria-label="User Account"><i class="far fa-user"></i></button>
+                <button class="icon-btn cart-icon" id="cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main style="margin-top: 80px;">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/hero_banner.png" alt="ZĀRAK Premium Edition" id="hero-img">
+            </div>
+            <div class="hero-content">
+                <div class="badges">
+                    <span class="badge">COD Available</span>
+                    <span class="badge">Free Delivery</span>
+                </div>
+                <h1>Redefine Your<br>Everyday Luxury</h1>
+                <p>Discover the new standard of premium lifestyle essentials in Pakistan. Handcrafted quality, timeless
+                    design.</p>
+                <div class="hero-actions">
+                    <a href="collection.html" class="btn btn-primary">Shop Now</a>
+                    <a href="collection.html" class="btn btn-outline">Explore Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <div class="trust-bar">
+            <div class="container">
+                <div class="trust-grid">
+                    <a href="secure-payment.html" class="trust-item" style="text-decoration: none; color: inherit;">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Cash on Delivery</span>
+                    </a>
+                    <a href="secure-payment.html" class="trust-item" style="text-decoration: none; color: inherit;">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Payments</span>
+                    </a>
+                    <a href="returns.html" class="trust-item" style="text-decoration: none; color: inherit;">
+                        <i class="fas fa-undo"></i>
+                        <span>7-Day Easy Return</span>
+                    </a>
+                    <a href="shipping.html" class="trust-item" style="text-decoration: none; color: inherit;">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Nationwide Shipping</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Selling Products -->
+        <section class="section products-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Best Sellers</h2>
+                    <p>Curated selections loved by thousands across Pakistan.</p>
+                </div>
+
+                <div class="product-grid" id="dynamic-product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="discount-badge">-15%</span>
+                            <img src="images/perfume_bottle.png" alt="Oud Absolu Perfume" id="product-1-img">
+                            <button class="quick-add-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(124)</span>
+                            </div>
+                            <h3 class="product-title">Oud Absolu Eau de Parfum</h3>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 8,499</span>
+                                <span class="original-price">Rs. 9,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/silk_dress.png" alt="Midnight Silk Slip Dress" id="product-2-img">
+                            <button class="quick-add-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <h3 class="product-title">Midnight Satin Slip Dress</h3>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 12,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="discount-badge">-20%</span>
+                            <img src="images/mens_wallet.png" alt="Classic Leather Wallet" id="product-3-img">
+                            <button class="quick-add-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span>(56)</span>
+                            </div>
+                            <h3 class="product-title">Classic Leather Wallet</h3>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 3,599</span>
+                                <span class="original-price">Rs. 4,499</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/home_decor_vase.png" alt="Nordic Ceramic Vase" id="product-4-img">
+                            <button class="quick-add-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(210)</span>
+                            </div>
+                            <h3 class="product-title">Nordic Ceramic Vase</h3>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 4,299</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="section bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Shop by Category</h2>
+                    <p>Explore our premium collections tailored for your lifestyle.</p>
+                </div>
+                <div class="category-grid" id="dynamic-category-grid">
+                    <a href="fashion.html" class="category-card">
+                        <img src="images/silk_dress.png" alt="Fashion" id="cat-fashion-img">
+                        <div class="category-content">
+                            <h3>Fashion</h3>
+                            <span>Explore</span>
+                        </div>
+                    </a>
+                    <a href="beauty.html" class="category-card">
+                        <img src="images/perfume_bottle.png" alt="Beauty" id="cat-beauty-img">
+                        <div class="category-content">
+                            <h3>Beauty</h3>
+                            <span>Explore</span>
+                        </div>
+                    </a>
+                    <a href="living.html" class="category-card">
+                        <img src="images/home_decor_vase.png" alt="Home Decor" id="cat-living-img">
+                        <div class="category-content">
+                            <h3>Home Decor</h3>
+                            <span>Explore</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Limited Time Offer -->
+        <section class="flash-sale">
+            <div class="container">
+                <div class="flash-sale-wrapper">
+                    <div class="flash-sale-content">
+                        <span class="badge"
+                            style="background-color: #d9534f; border-color: #d9534f; margin-bottom: 20px; display: inline-block;">Flash
+                            Sale</span>
+                        <h2>Luxury Bundle Offer</h2>
+                        <p>Get up to 40% off on our exclusive curated bundles. Offer valid for a limited time only.</p>
+                        <div class="countdown" id="countdown">
+                            <div class="time-box">
+                                <span id="days">02</span>
+                                <small>Days</small>
+                            </div>
+                            <div class="time-box">
+                                <span id="hours">14</span>
+                                <small>Hours</small>
+                            </div>
+                            <div class="time-box">
+                                <span id="minutes">35</span>
+                                <small>Mins</small>
+                            </div>
+                            <div class="time-box">
+                                <span id="seconds">59</span>
+                                <small>Secs</small>
+                            </div>
+                        </div>
+                        <a href="sale.html" class="btn btn-primary" style="margin-top: 30px;">Shop the Sale</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What Our Customers Say</h2>
+                    <p>Trusted by thousands across Pakistan.</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"The quality of the silk dress is absolutely premium. The packaging felt
+                            so luxurious, and it arrived in Lahore within 2 days. Highly recommended!"</p>
+                        <div class="customer-info">
+                            <h4>Zara Ahmed</h4>
+                            <span>Lahore, Pakistan</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"I ordered the Oud perfume and it smells incredibly expensive.
+                            Long-lasting and sophisticated. Will definitely be ordering more for gifts."</p>
+                        <div class="customer-info">
+                            <h4>Bilal Qureshi</h4>
+                            <span>Karachi, Pakistan</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Beautiful ceramic vase! Exactly as shown in the pictures. The cash on
+                            delivery option made the whole process stress-free."</p>
+                        <div class="customer-info">
+                            <h4>Ayesha Khan</h4>
+                            <span>Islamabad, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-wrapper">
+                    <h2>Join the ZĀRAK Club</h2>
+                    <p>Subscribe to receive 10% off your first order and exclusive access to new arrivals.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Whatsapp Floating Button -->
+    <a href="https://wa.me/923000000000" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="logo" style="color: white; margin-bottom: 20px;">ZĀRAK</h3>
+                    <p>Redefining everyday luxury for the modern Pakistani lifestyle.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="new-in.html">New Arrivals</a></li>
+                        <li><a href="fashion.html">Women's Fashion</a></li>
+                        <li><a href="fashion.html">Men's Essentials</a></li>
+                        <li><a href="living.html">Home Decor</a></li>
+                        <li><a href="beauty.html">Beauty & Fragrance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="track.html">Track Order</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="returns.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ZĀRAK. Developed for premium e-commerce in Pakistan. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dynamic-content.js"></script>
+</body>
+
+</html>
